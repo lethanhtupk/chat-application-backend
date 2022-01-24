@@ -1,0 +1,28 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "semi": ["error", "never"],
+    "@typescript-eslint/no-var-requires": 0,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0,
+        "maxBOF": 0
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
+  }
+}
