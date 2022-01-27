@@ -13,8 +13,7 @@
     "noImplicitThis": false,
     "isolatedModules": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist/**/*"]
