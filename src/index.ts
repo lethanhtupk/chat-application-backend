@@ -1,22 +1,12 @@
-const express = require('express')
-const expressWs = require('express-ws')
+import 'dotenv/config'
+import express from 'express'
 
-const appBase = express()
-const wsInstance = expressWs(appBase)
-const { app } = wsInstance
+const app = express()
 
-app.get('/', function (req, res) {
-  res.end('Hello word')
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 })
 
-app.ws('/', function (ws, req) {
-  ws.on('message', function (msg) {
-    console.log('Message received: ', msg)
-  })
+app.listen({ port: process.env.PORT }, () => {
+  console.log(`Server are listening on port ${process.env.PORT}`)
 })
-
-app.listen(8000, () => {
-  console.log('server is listening on port 3000')
-})
-
-export default app
